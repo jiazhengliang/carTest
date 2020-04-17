@@ -21,6 +21,4 @@ Pod::Spec.new do |spec|
   spec.source_files  = "publishUi/initUI/**/*.{h,m}"
 
 
-spec.dependency "JSONKit", "~> 1.4"
-
 end
