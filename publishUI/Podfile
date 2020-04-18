@@ -1,6 +1,9 @@
 platform :ios, '8.0'
 target ‘publishUi’ do
+pod 'FMDB'
+
 
 pod 'MJRefresh'
 source 'https://github.com/CocoaPods/Specs.git'
+
 end
