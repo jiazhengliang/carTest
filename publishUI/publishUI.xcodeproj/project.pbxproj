@@ -19,6 +19,7 @@
 		DF6B22D424493BC600DBB9B3 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6B22CC24493BC600DBB9B3 /* UIView+Frame.m */; };
 		DF6B22D524493BC600DBB9B3 /* UIView+FTCornerdious.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6B22CE24493BC600DBB9B3 /* UIView+FTCornerdious.m */; };
 		DF6B22D624493BC600DBB9B3 /* UIView+UG.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6B22D024493BC600DBB9B3 /* UIView+UG.m */; };
+		EC2D0252CEA414BA59DAE75D /* libPods-publishUi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B212A0D5F305317ACCD70F7 /* libPods-publishUi.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D3FDDC5E99474B4FDC1FA1D /* Pods-publishUi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-publishUi.release.xcconfig"; path = "Target Support Files/Pods-publishUi/Pods-publishUi.release.xcconfig"; sourceTree = "<group>"; };
+		9B212A0D5F305317ACCD70F7 /* libPods-publishUi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-publishUi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C423108AB676EBDB193A7FFB /* Pods-publishUi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-publishUi.debug.xcconfig"; path = "Target Support Files/Pods-publishUi/Pods-publishUi.debug.xcconfig"; sourceTree = "<group>"; };
 		DF6B22932448452E00DBB9B3 /* publishUi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = publishUi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6B22962448452E00DBB9B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DF6B22972448452E00DBB9B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2D0252CEA414BA59DAE75D /* libPods-publishUi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B92E7F17CB3FF2C03053626 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C423108AB676EBDB193A7FFB /* Pods-publishUi.debug.xcconfig */,
+				3D3FDDC5E99474B4FDC1FA1D /* Pods-publishUi.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		75C5037E4D54B7DEBC2FF3BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B212A0D5F305317ACCD70F7 /* libPods-publishUi.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DF6B228A2448452E00DBB9B3 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +120,8 @@
 				DF6B22B12448452E00DBB9B3 /* publishUiTests */,
 				DF6B22BC2448452E00DBB9B3 /* publishUiUITests */,
 				DF6B22942448452E00DBB9B3 /* Products */,
+				1B92E7F17CB3FF2C03053626 /* Pods */,
+				75C5037E4D54B7DEBC2FF3BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF6B22C22448452E00DBB9B3 /* Build configuration list for PBXNativeTarget "publishUi" */;
 			buildPhases = (
+				057FCE2CFE3CB45FD26A87C5 /* [CP] Check Pods Manifest.lock */,
 				DF6B228F2448452E00DBB9B3 /* Sources */,
 				DF6B22902448452E00DBB9B3 /* Frameworks */,
 				DF6B22912448452E00DBB9B3 /* Resources */,
+				3E05E3CCAA9F4E7058059F0D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,6 +311,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		057FCE2CFE3CB45FD26A87C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-publishUi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E05E3CCAA9F4E7058059F0D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-publishUi/Pods-publishUi-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-publishUi/Pods-publishUi-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-publishUi/Pods-publishUi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DF6B228F2448452E00DBB9B3 /* Sources */ = {
@@ -463,6 +532,7 @@
 		};
 		DF6B22C32448452E00DBB9B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C423108AB676EBDB193A7FFB /* Pods-publishUi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -479,6 +549,7 @@
 		};
 		DF6B22C42448452E00DBB9B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D3FDDC5E99474B4FDC1FA1D /* Pods-publishUi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
