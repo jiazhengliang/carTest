@@ -20,6 +20,6 @@ Pod::Spec.new do |spec|
 
   spec.source_files  = "publishUi/initUI/**/*.{h,m}"
 
-  s.dependency 'MJRefresh'
+  spec.dependency 'MJRefresh'
 
 end
